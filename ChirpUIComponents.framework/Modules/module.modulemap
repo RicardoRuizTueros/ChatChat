@@ -1,0 +1,6 @@
+framework module ChirpUIComponents {
+  umbrella header "ChirpUIComponents.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Contacts View Controler-->
+        <scene sceneID="EYq-OK-Mxc">
+            <objects>
+                <viewController storyboardIdentifier="Contacts" useStoryboardIdentifierAsRestorationIdentifier="YES" id="8vy-iX-RYL" customClass="ContactsViewControler" customModule="ChatChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="inN-tc-RLJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="uQ4-uB-83X"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ACB-zW-OXR" userLabel="Contacts" customClass="ChirpWaveformView">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" alpha="0.89999997615814209" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H84-7j-wWU" userLabel="Back">
+                                <rect key="frame" x="20" y="54" width="88" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="88" id="l2G-Do-qzE"/>
+                                </constraints>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="BackToLogin:" destination="8vy-iX-RYL" eventType="touchUpInside" id="l4f-Hd-iJc"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contacts" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UqN-wN-gUT">
+                                <rect key="frame" x="54" y="111" width="197" height="58"/>
+                                <gestureRecognizers/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="42"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eSs-IJ-mLf" customClass="ChirpWaveformView">
+                                <rect key="frame" x="0.0" y="520" width="320" height="48"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="receivedFlashColor">
+                                        <color key="value" red="0.96470588239999999" green="0.92156862750000001" blue="0.0" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="sentFlashColor">
+                                        <color key="value" red="0.40000000600000002" green="1" blue="0.40000000600000002" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q7S-N2-YLU">
+                                <rect key="frame" x="77" y="202" width="166" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="aSl-Cc-69x"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
+                                <state key="normal" title="Add new">
+                                    <color key="titleColor" red="0.021180555560000001" green="0.3170019744" blue="0.66119791670000005" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="AddNewContactSender:" destination="8vy-iX-RYL" eventType="touchUpInside" id="Sv5-rR-Stw"/>
+                                </connections>
+                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iil-Pa-I4g">
+                                <rect key="frame" x="20" y="279" width="280" height="213"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.019607843140000001" green="0.31764705879999999" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Q7S-N2-YLU" firstAttribute="leading" secondItem="ACB-zW-OXR" secondAttribute="leadingMargin" constant="61" id="10g-Yh-ELl"/>
+                            <constraint firstItem="iil-Pa-I4g" firstAttribute="centerX" secondItem="ACB-zW-OXR" secondAttribute="centerX" id="31A-tD-9w0"/>
+                            <constraint firstItem="iil-Pa-I4g" firstAttribute="centerX" secondItem="eSs-IJ-mLf" secondAttribute="centerX" id="5cH-ZE-HJ2"/>
+                            <constraint firstAttribute="bottom" secondItem="iil-Pa-I4g" secondAttribute="bottom" constant="76" id="AlC-Gh-lwo"/>
+                            <constraint firstItem="iil-Pa-I4g" firstAttribute="top" secondItem="Q7S-N2-YLU" secondAttribute="bottom" constant="27" id="E4R-hz-YLx"/>
+                            <constraint firstItem="eSs-IJ-mLf" firstAttribute="leading" secondItem="ACB-zW-OXR" secondAttribute="leading" id="LG0-qs-V8k"/>
+                            <constraint firstItem="eSs-IJ-mLf" firstAttribute="bottom" secondItem="uQ4-uB-83X" secondAttribute="top" id="N5S-xy-NzS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UqN-wN-gUT" secondAttribute="trailing" constant="53" id="Qex-Cf-dA6"/>
+                            <constraint firstItem="Q7S-N2-YLU" firstAttribute="centerX" secondItem="iil-Pa-I4g" secondAttribute="centerX" id="XIo-XI-RmB"/>
+                            <constraint firstItem="H84-7j-wWU" firstAttribute="top" secondItem="inN-tc-RLJ" secondAttribute="bottom" constant="34" id="fac-le-dhP"/>
+                            <constraint firstItem="eSs-IJ-mLf" firstAttribute="top" secondItem="iil-Pa-I4g" secondAttribute="bottom" constant="28" id="ff4-MG-Grs"/>
+                            <constraint firstItem="iil-Pa-I4g" firstAttribute="leading" secondItem="H84-7j-wWU" secondAttribute="leading" id="grQ-3X-SnW"/>
+                            <constraint firstItem="iil-Pa-I4g" firstAttribute="top" secondItem="ACB-zW-OXR" secondAttribute="top" constant="279" id="j4o-22-ZNd"/>
+                            <constraint firstItem="iil-Pa-I4g" firstAttribute="leading" secondItem="ACB-zW-OXR" secondAttribute="leadingMargin" constant="4" id="qDn-Ps-5UA"/>
+                            <constraint firstItem="UqN-wN-gUT" firstAttribute="top" secondItem="H84-7j-wWU" secondAttribute="bottom" constant="23" id="teq-4n-gFQ"/>
+                            <constraint firstItem="UqN-wN-gUT" firstAttribute="leading" secondItem="ACB-zW-OXR" secondAttribute="leadingMargin" constant="38" id="w6H-i6-pDV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="chirpWave" destination="eSs-IJ-mLf" id="QkQ-wJ-lvN"/>
+                        <outlet property="contactsScroll" destination="iil-Pa-I4g" id="XeU-KX-xRl"/>
+                        <segue destination="dEK-07-HW7" kind="modal" identifier="ChatWithContact" id="Hqo-1c-AKb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Spp-me-Qr3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="82" y="214"/>
+        </scene>
+        <!--ChatChat-->
+        <scene sceneID="IoX-7O-XBY">
+            <objects>
+                <viewController title="ChatChat" id="h7u-xN-QNm" customClass="ChatWithContactViewController" customModule="ChatChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mHb-4G-OUl"/>
+                        <viewControllerLayoutGuide type="bottom" id="hML-MT-smJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ufH-Dt-02v">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Chat" id="TH1-ie-FxS">
+                        <barButtonItem key="leftBarButtonItem" id="NVS-z3-DRS">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="wMK-H1-oXH">
+                                <rect key="frame" x="16" y="7" width="57" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="BackToLogin" destination="h7u-xN-QNm" eventType="touchUpInside" id="Wbz-ca-ZEd"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ObH-AZ-SB9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1009" y="214"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="NID-Nz-6CS">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dEK-07-HW7" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="iUW-TU-sw3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.019607843140000001" green="0.31764705879999999" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="h7u-xN-QNm" kind="relationship" relationship="rootViewController" id="fbC-5q-VsO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="taI-Ha-XhH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="544" y="214"/>
+        </scene>
+    </scenes>
+</document>
